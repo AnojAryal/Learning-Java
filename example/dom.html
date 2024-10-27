@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and JavaScript Example</title>
+</head>
+<body>
+
+    <h1>Understanding DOM and JavaScript</h1>
+    <p id="demo">This is a simple paragraph.</p>
+
+    <button onclick="changeText()">Click Me to Change the Text</button>
+
+    <script>
+        // JavaScript function to modify the DOM
+        function changeText() {
+            // Access the paragraph element by its ID
+            document.getElementById("demo").innerHTML = "The text has been changed!";
+        }
+    </script>
+
+</body>
+</html>

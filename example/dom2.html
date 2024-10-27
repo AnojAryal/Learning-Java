@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example: Add/Remove Video</title>
+</head>
+<body>
+
+    <h1>Interactive Video Example with JavaScript and DOM</h1>
+    <button onclick="addVideo()">Add Video</button>
+    <button onclick="removeVideo()">Remove Video</button>
+
+    <!-- Div where the video will be inserted -->
+    <div id="video-container"></div>
+
+    <script>
+        // Function to add a video dynamically to the DOM
+        function addVideo() {
+            // Create a new video element
+            var video = document.createElement('video');
+            video.setAttribute('width', '400');
+            video.setAttribute('controls', '');
+
+            // Create a source element for the video
+            var source = document.createElement('source');
+            source.setAttribute('src', 'sample.mp4');
+            source.setAttribute('type', 'video/mp4');
+
+            // Append the source to the video element
+            video.appendChild(source);
+
+            // Insert the video element into the "video-container" div
+            document.getElementById('video-container').appendChild(video);
+        }
+
+        // Function to remove the video from the DOM
+        function removeVideo() {
+            var videoContainer = document.getElementById('video-container');
+            videoContainer.innerHTML = '';  // Clear the content of the video container
+        }
+    </script>
+
+</body>
+</html>

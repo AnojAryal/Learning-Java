@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Page Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #time-container {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dynamic Web Page Example</h1>
+    <p>Click the button below to see the current time displayed dynamically:</p>
+
+    <button onclick="displayTime()">Show Current Time</button>
+
+    <!-- This is where the dynamic content will be displayed -->
+    <div id="time-container"></div>
+
+    <script>
+        // JavaScript function to display current time
+        function displayTime() {
+            // Create a new Date object
+            const currentTime = new Date();
+            // Format the time
+            const formattedTime = currentTime.toLocaleTimeString();
+            // Display the time inside the time-container div
+            document.getElementById('time-container').innerText = "Current Time: " + formattedTime;
+        }
+    </script>
+
+</body>
+</html>
